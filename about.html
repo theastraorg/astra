@@ -51,6 +51,7 @@
     </div>
     <nav class="flex-col md:flex-row flex-grow hidden justify-center md:flex md:items-end md:py-0 py-12" :class="{'flex': open, 'hidden': !open}"> <ul class="items-center gap-y-6 md:gap-3 justify-center list-none md:inline-flex md:ml-auto  md:text-left  text-center">
       <li> <a href="/about.html" title="About Astra" aria-label="About Astra" class=" text-xs text-white hover:text-blue-300">About</a> </li>
+      <li> <a href="/archives/projects.html" title="Showcase" aria-label="Showcase" class=" text-xs text-white hover:text-blue-300">Showcase</a> </li>
       <li> <a href="/hackathons.html" title="Hackathons" aria-label="Hackathons" class=" text-xs text-white hover:text-blue-300">Hackathons</a> </li>
       <li> <a href="https://discord.com/invite/ztCZXZjj7T" title="Join Astra - Hack & Build together" aria-label="Join Astra - Hack & Build together" class="inline-flex items-center px-4 py-2 text-xs text-onyx-950 text-center transition duration-500 ease-in-out transform rounded-lg bg-gradient-to-tr from-blue-500 h-10 via-blue-400 to-blue-300 hover:to-blue-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-300">Join Our Community</a> </li>
       </ul>
@@ -80,10 +81,53 @@
                <p>We are a hackathon ecosystem dedicated to incubating the next generation of leading technical talents, providing both in-person and virtual experiences. In collaboration with our partners, we organize monthly hackathons, each focused on a distinct area of technology.</p>
                <p>We host regular global hackathons every month, offering both in-person and virtual experiences, each focusing on a specific area of technology.</p>
                <p>Our Mission is aimed to equip the next generation of creatives and builders by creating a vibrant community for sharing ideas, imparting practical skills, and exploring the potential of emerging technologies through hackathons.               </p>
-               <p><a href="/team.html" style="text-decoration: none;">/Astra Team</a></p>
+               <p><a href="#team" style="text-decoration: none;">/Astra Team</a></p>
             </div>
          </div>
       </section>
+      <section class="relative overflow-hidden" id="team">
+        <div class="px-8 pt-32 pb-24 mx-auto md:px-12 lg:px-36 lg:pt-64 max-w-7xl relative">
+           <div data-aos="fade-down" data-aos-duration="3000">
+              <h1 class="text-4xl lg:text-5xl text-white font-display">
+                 Get to know our<span class="md:block text-onyx-400">
+                 powerful team.</span> 
+              </h1>
+              <p class="text-onyx-300 mt-4">Our dedicated team handling operations, finance, & development at Astra</p>
+           </div>
+           <ul role="list" class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 mt-24">
+              <li>
+                 <a href="https://x.com/JShankarpure" title="Jay Shankapure" aria-label="Jay Shankapure" class="h-full group flex flex-col justify-between text-center">
+                    <img src="images/team/jay.jpg" alt="Jay Shankapure" class="object-cover shrink-0 h-16 w-16 rounded-full mx-auto"> 
+                    <p class="text-sm font-medium leading-6 text-white mt-12">Jay Shankapure / <span class="text-onyx-300"> Chief Everything Officer</span> </p>
+                 </a>
+              </li>
+              <li>
+                 <a href="https://www.linkedin.com/in/kei-hayashi/" title="Kei Hayashi" aria-label="Kei Hayashi" class="h-full group flex flex-col justify-between text-center">
+                    <img src="images/team/kei.jpg" alt="Kei Hayashi" class="object-cover shrink-0 h-16 w-16 rounded-full mx-auto"> 
+                    <p class="text-sm font-medium leading-6 text-white mt-12">Kei Hayashi / <span class="text-onyx-300"> Cheif Financial Officer</span> </p>
+                 </a>
+              </li>
+              <li>
+                 <a href="https://twitter.com/michaelbeer01" title="Michael Beer" aria-label="Michael Beer" class="h-full group flex flex-col justify-between text-center">
+                    <img src="images/team/michael.png" alt="Michael Beer" class="object-cover shrink-0 h-16 w-16 rounded-full mx-auto"> 
+                    <p class="text-sm font-medium leading-6 text-white mt-12">Michael Beer / <span class="text-onyx-300"> President</span> </p>
+                 </a>
+              </li>
+              <li>
+               <a href="https://www.linkedin.com/in/suhasasumukh/" title="Suhas Sumukh" aria-label="Suhas Sumukh" class="h-full group flex flex-col justify-between text-center">
+                  <img src="images/team/suhas.jpg" alt="Suhas Sumukh" class="object-cover shrink-0 h-16 w-16 rounded-full mx-auto"> 
+                  <p class="text-sm font-medium leading-6 text-white mt-12">Suhas Sumukh / <span class="text-onyx-300"> Chief Operating Officer</span> </p>
+               </a>
+              </li>
+              <li>
+               <a href="https://www.linkedin.com/in/andrew-bilinsky/" title="Andrew Bilinsky" aria-label="Andrew Bilinsky" class="h-full group flex flex-col justify-between text-center">
+                  <img src="images/team/andrew.png" alt="Andrew Bilinsky" class="object-cover shrink-0 h-16 w-16 rounded-full mx-auto"> 
+                  <p class="text-sm font-medium leading-6 text-white mt-12">Andrew Bilinsky / <span class="text-onyx-300">Chief Content Officer</span> </p>
+               </a>
+              </li>
+           </ul>
+        </div>
+     </section>
 
 
       <footer aria-labelledby="footer-heading">
@@ -110,8 +154,8 @@
                   <a class="relative -my-2 -mx-3 rounded-lg px-3 py-2 text-sm text-onyx-300 transition-colors delay-150 hover:text-white hover:delay-[0ms] hover:bg-onyx-900" href="https://www.linkedin.com/company/theastraorg">
                     <span class="relative z-10">LinkedIn</span>
                   </a>
-                  <a class="relative -my-2 -mx-3 rounded-lg px-3 py-2 text-sm text-onyx-300 transition-colors delay-150 hover:text-white hover:delay-[0ms] hover:bg-onyx-900" href="https://sparkhack.substack.com/">
-                    <span class="relative z-10">Newsletter</span> </a> <a class="relative -my-2 -mx-3 rounded-lg px-3 py-2 text-sm text-onyx-300 transition-colors delay-150 hover:text-white hover:delay-[0ms] hover:bg-onyx-900" href="https://sparkhandbook.vercel.app/">
+                  <a class="relative -my-2 -mx-3 rounded-lg px-3 py-2 text-sm text-onyx-300 transition-colors delay-150 hover:text-white hover:delay-[0ms] hover:bg-onyx-900" href="https://astraorg.substack.com">
+                    <span class="relative z-10">Press</span> </a> <a class="relative -my-2 -mx-3 rounded-lg px-3 py-2 text-sm text-onyx-300 transition-colors delay-150 hover:text-white hover:delay-[0ms] hover:bg-onyx-900" href="https://sparkhandbook.vercel.app/">
                       <span class="relative z-10">Astra Handbook</span> </a>
                 </nav>
               </div>
