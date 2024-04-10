@@ -1,1 +1,0 @@
-window.lemonSqueezyAffiliateConfig={store:"lexingtonthemes"};
