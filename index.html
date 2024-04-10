@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en" class="selection:bg-white selection:text-black">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="author" content="The Astra Team">
+      <meta name="theme-color" content="#030303">
+      <meta name="viewport" content="width=device-width">
+      <meta name="msapplication-TileColor" content="#030303">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="your keywords" content="Add ypour keywords here">
+      <meta name="title" content="Astra Org">
+      <meta name="description" content="#">
+      <meta name="author" content="Astra Org">
+      <meta property="og:title" content="The Astra Org">
+      <meta property="og:description" content="#">
+      <meta property="og:type" content="website">
+      <meta property="og:url" content="#">
+      <meta property="og:image" content="#">
+      <meta property="og:site_name" content="The Astra Org">
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:description" content="#">
+      <meta name="twitter:image" content="#">
+      <title>Astra - A Home for Builders & Indie-Hackers</title>
+      <link rel="apple-touch-icon" sizes="180x180" href="#">
+      <link rel="icon" type="image/png" sizes="32x32" href="#">
+      <link rel="icon" type="image/x-icon" href="./images/logo/logo.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="#">
+      <link rel="mask-icon" href="#" color="#f0f0ef">
+      <link rel="manifest" href="#">
+      <link rel="mask-icon" href="#" color="#f0f0ef">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+      <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&amp;family=Syne:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+      <script defer="" src="js/cdn.min.js"></script>
+      <link rel="stylesheet" href="css/blog-one.BQitWOg7.css">
+      <link rel="stylesheet" href="css/_slug_.BtqeqFzY.css">
+   </head>
+   <body class="bg-vanta-950">
+      <section class="fixed z-50 w-full overflow-hidden relatve backdrop-blur-2xl">
+         <div class="relative w-full mx-auto max-w-7xl">
+            <div x-data="{ open: false }" class="relative flex flex-col w-full px-8 py-5 mx-auto md:items-center md:justify-between md:flex-row md:px-12 lg:px-32">
+               <div class="flex flex-row items-center justify-between text-white lg:justify-start">
+                  <a href="/" class="inline-flex items-center gap-3">
+                     <span>
+                     </span>
+                     <span class="font-bold text-xl uppercase">Astra</span> 
+                  </a>
+                  <button @click="open = !open" class="inline-flex items-center justify-center p-2 text-white hover:text-indigo-400 focus:outline-none focus:text-white md:hidden">
+                     <svg class="w-6 h-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                        <path :class="{'hidden': open, 'inline-flex': !open }" class="inline-flex" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        <path :class="{'hidden': !open, 'inline-flex': open }" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                     </svg>
+                  </button>
+               </div>
+               <nav :class="{'flex': open, 'hidden': !open}" class="flex-col items-center flex-grow hidden md:pb-0 md:flex md:justify-end md:flex-row"> 
+                  <a class="px-2 py-2 text-sm font-normal text-vanta-300 lg:px-6 md:px-3 hover:text-white lg:ml-auto" href="/comingsoon.html">About</a>
+                  <a class="px-2 py-2 text-sm font-normal text-vanta-300 lg:px-6 md:px-3 hover:text-white" href="/comingsoon.html">Showcase</a>
+                  <a class="px-2 py-2 text-sm font-normal text-vanta-300 lg:px-6 md:px-3 hover:text-white" href="/comingsoon.html">Hackathons</a>
+                  <a href="https://discord.com/invite/ztCZXZjj7T" aria-label="Join Astra - Hack & Build together!" title="Join Astra - Hack & Build together!" class="rounded-lg px-4 py-2 text-sm transition-all flex items-center justify-center text-white bg-gradient-to-b from-white/[.105] to-white/[.15] hover:to-white/[.25] h-8 ring-1 ring-inset ring-white/10">
+                  Join Astra
+                  </a> 
+               </nav>
+            </div>
+         </div>
+      </section>
+      <section class="relative overflow-hidden">
+         <div class="relative px-8 py-24 mx-auto md:px-12 lg:px-32 max-w-7xl lg:pt-56 lg:pb-12">
+            <div class="text-left sm:text-center">
+               <p class="text-3xl font-medium font-display tracking-tight text-transparent pb-2 sm:text-5xl bg-gradient-to-r from-vanta-100 via-vanta-300 to-vanta-500 bg-clip-text">
+                  Build out ideas that excite you
+                  <span class="lg:block"> today and be a part of history.</span> 
+               </p>
+               <p class="max-w-md mx-auto mt-4 text-vanta-300">
+                  Astra is a community of builders, indie-hackers, and student developers, who come together to innovate and create.
+               </p>
+               <div class="flex flex-col max-w-xl mx-auto justify-center gap-2 mt-12 sm:flex-row relative"> <a href="https://discord.com/invite/ztCZXZjj7T" aria-label="Join Astra - Hack & Build together!" title="Join Astra - Hack & Build together!" class="flex items-center justify-center h-10 px-4 py-2 text-sm text-white transition-all rounded-lg hover:to-vanta-600 bg-gradient-to-b from-vanta-300 via-vanta-400 to-vanta-500">Join Astra</a></div>
+            </div>
+            <img class="absolute blur-3xl w-96 mt-12 inset-x-0 h-96 mx-auto left-0" src="images/avatar1.svg" alt=""> 
+            <div class="ring-white/10 ring-1 p-2 bg-gradient-to-t mt-12 lg:mt-24 from-white/20 rounded-3xl relative"> 
+               <!--<img src="images/discord.png" alt="#" class="w-full opacity-80 ring-1 shadow-massive ring-white/10 rounded-2xl">-->
+            </div>
+         </div>
+      </section>
+      <section>
+         <div class="px-8 py-24 mx-auto md:px-12 lg:px-32 max-w-7xl">
+            <p class="text-sm text-vanta-300 text-center uppercase max-w-xs mx-auto"> <span>Some of the amazing companies that trust us</span> </p>
+            <div class="mx-auto flex w-5/6 flex-col gap-4">
+               <div class="mx-auto grid grid-cols-2 items-center sm:grid-cols-3 lg:grid-cols-6">
+                  <div class="flex h-24 items-center justify-center px-4"> <img class="h-8" src="./images/sponsors/bluelearn.png" alt="bluelearn"> </div>
+                  <div class="flex h-24 items-center justify-center px-4"> <img class="h-8" src="./images/sponsors/actualone.png" alt="actualone"> </div>
+                  <div class="flex h-24 items-center justify-center px-4"> <img class="h-8" src="./images/sponsors/yep.png" alt="yep.so"> </div>
+                  <div class="flex h-24 items-center justify-center px-4"> <img class="h-8" src="./images/sponsors/crackeddevs.png" alt="crackeddevs"> </div>
+                  <div class="flex h-24 items-center justify-center px-4"> <img class="h-8" src="./images/sponsors/codedamn.png" alt="codedamn"> </div>
+                  <div class="flex h-24 items-center justify-center px-4"> <img class="h-8" src="./images/sponsors/xyz.png" alt="xyz"> </div>
+               </div>
+            </div>
+            <div class="mx-auto hidden w-full md:flex">
+               <div class="mx-auto grid grid-cols-2 items-center sm:grid-cols-3 lg:grid-cols-6">
+                  <div class="flex h-24 items-center justify-center px-4"> <img class="" src="./images/sponsors/interviewcake.png" alt="interviewcake"> </div>
+                  <div class="flex h-24 items-center justify-center px-4"> <img class="h-12" src="./images/sponsors/flatlogic.png" alt="flatlogic"> </div>
+                  <div class="flex h-24 items-center justify-center px-4"> <img class="h-6" src="./images/sponsors/zeroic.png" alt="zeroic"> </div>
+                  <div class="flex h-24 items-center justify-center px-4"> <img class="h-12" src="./images/sponsors/devkit.png" alt="devkit"> </div>
+                  <div class="flex h-24 items-center justify-center px-4"> <img class="h-6" src="./images/sponsors/eraofnocode.png" alt="eraofnocode"> </div>
+                  <div class="flex h-24 items-center justify-center px-4"> <img class="h-6" src="./images/sponsors/fueler.png" alt="Brand 12"> </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!--
+      <section>
+         <div class="px-8 py-12 mx-auto md:px-12 lg:px-32 max-w-7xl lg:py-24">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-end">
+               <div class="lg:col-span-2">
+                  <p class="bg-gradient-to-r from-vanta-50 via-vanta-300 to-vanta-600 bg-clip-text text-transparent text-4xl font-normal font-display tracking-tight pb-2 sm:text-5xl">
+                     Be part of our community
+                  <span class="lg:block">and start building together</span> 
+                  </p>
+               </div>
+               <div>
+                  <p class="text-vanta-300 max-w-sm mx-auto">
+                     Participate in discussions, share ideas, connect with other fellow builders.
+                  </p>
+               </div>
+            </div>
+            <ul class="grid grid-cols-1 mt-12 list-none md:grid-cols-3 gap-2" role="list">
+               <li class="ring-white/10 ring-1 p-2 bg-gradient-to-t from-white/20 rounded-3xl lg:col-span-1">
+                  <div class="p-8 ring-1 ring-white/10 rounded-2xl lg:p-10 shadow-massive bg-card/80 h-full">
+                     <span class="ring-1 ring-white/10 rounded-full bg-white/5 h-10 w-10 items-center inline-flex text-white mx-auto justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-route" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                           <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                           <path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                           <path d="M18 5m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                           <path d="M12 19h4.5a3.5 3.5 0 0 0 0 -7h-8a3.5 3.5 0 0 1 0 -7h3.5"></path>
+                        </svg>
+                     </span>
+                     <p class="text-lg mt-12 font-display text-white lg:text-3xl">Collaborative</p>
+                     <p class="mt-2 text-sm text-vanta-300">We are a community that</p>
+                  </div>
+               </li>
+               <li class="ring-white/10 ring-1 p-2 bg-gradient-to-t from-white/20 rounded-3xl lg:col-span-2">
+                  <div class="p-8 ring-1 ring-white/10 rounded-2xl lg:p-10 shadow-massive bg-card/80 h-full">
+                     <span class="ring-1 ring-white/10 rounded-full bg-white/5 h-10 w-10 items-center inline-flex text-white mx-auto justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-school" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                           <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                           <path d="M22 9l-10 -4l-10 4l10 4l10 -4v6"></path>
+                           <path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4"></path>
+                        </svg>
+                     </span>
+                     <p class="text-lg mt-12 font-display text-white lg:text-3xl">  passion </p>
+                     <p class="mt-2 text-sm text-vanta-300">At Vanta, we believe that everyone has something to teach and share with the world. Our teachers are not just experts in their field, they are also passionate about teaching and helping others discover their own creativity. They take the time to get to know their students and tailor their instruction to meet their individual needs and goals.</p>
+                  </div>
+               </li>
+            </ul>
+         </div>
+      </section>
+   -->
+
+
+      <section class="relative overflow-hidden">
+         <div class="px-8 py-12 mx-auto md:px-12 lg:px-32 max-w-7xl lg:py-24 relative">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-end relative">
+               <div class="lg:col-span-2">
+                  <p class="bg-gradient-to-r from-vanta-50 via-vanta-300 to-vanta-600 bg-clip-text text-transparent text-4xl font-normal font-display tracking-tight pb-2 sm:text-6xl">
+                     Learn by Building,<span class="lg:block">Hackathons make it happen.</span> 
+                  </p>
+                  <!--
+                  <p class="text-vanta-300 mt-4 max-w-sm">
+                     Astra Hacks
+                  </p>-->
+               </div>
+               <div class="flex lg:ml-auto"> <a href="/comingsoon.html" class="rounded-lg px-4 py-2 text-sm transition-all flex items-center justify-center text-white bg-gradient-to-b from-white/[.105] to-white/[.15] hover:to-white/[.25] h-10 ring-1 ring-inset ring-white/10">See all our Hackathons</a> </div>
+            </div>
+            <div class="relative">
+               <img class="absolute blur-3xl w-96 inset-x-0 ml-auto h-96 right-32 -mt-12 lg:-mt-32" src="images/avatar1.svg" alt=""> 
+               <ul class="grid grid-cols-1 relative lg:grid-cols-2 mt-12 list-none gap-2 ring-white/10 ring-1 p-2 rounded-3xl bg-gradient-to-t from-white/20" role="list">
+                  <li class="bg-card/80 backdrop-blur-2xl p-8 rounded-2xl shadow-massive ring-white/10 ring-1 flex flex-col h-full justify-between">
+                     <div>
+                        <p class="text-lg font-display text-white lg:text-xl">CrackedDevs X Spark Hackathon 2024</p>
+                        <div class="inline-flex mt-8 items-center gap-2 w-full">
+                           <div>
+                              <span class="inline-flex gap-2 items-center rounded-md bg-vanta-800 px-2 py-1 text-xs text-white ring-1 ring-inset ring-white/10">
+                                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-school h-4 w-4" viewBox="0 0 24 24" stroke-width="1.25" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M22 9l-10 -4l-10 4l10 4l10 -4v6"></path>
+                                    <path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4"></path>
+                                 </svg>
+                                 <span>Online Hackathon</span> 
+                              </span>
+                           </div>
+                           <div>
+                              <p class="inline-flex gap-2 items-center rounded-md px-2 py-1 text-xs text-white">
+                                 <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star fill-white" width="12" height="12" viewBox="0 0 24 24" stroke-width="1.25" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                       <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                       <path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z"></path>
+                                    </svg>
+                                 </span>
+                                 <span>Mar 15 - 17, 2024</span> 
+                              </p>
+                              <p class="inline-flex gap-2 items-center rounded-md px-2 py-1 text-xs text-white">
+                                 <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star fill-white" width="12" height="12" viewBox="0 0 24 24" stroke-width="1.25" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                       <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                       <path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z"></path>
+                                    </svg>
+                                 </span>
+                                 <span>$40,000 in prizes</span> 
+                              </p>
+                           </div>
+                        </div>
+                        <p class="mt-8 text-sm text-vanta-300">For professional engineers to develop innovative projects, with potential for startup funding.</p>
+                     </div>
+                     <div class="mt-12"> <a href="/comingsoon.html" title="CrackedDevs X Spark Hackathon 2024" class="rounded-lg px-4 py-2 justify-between text-sm transition-all flex items-center text-white bg-gradient-to-b from-white/[.105] to-white/[.15] hover:to-white/[.25] h-10 ring-1 ring-inset ring-white/10">
+                         520+ Participants <span>View Hackathon</span> </a> 
+                     </div>
+                  </li>
+                  <li class="bg-card/80 backdrop-blur-2xl p-8 rounded-2xl shadow-massive ring-white/10 ring-1 flex flex-col h-full justify-between">
+                     <div>
+                        <p class="text-lg font-display text-white lg:text-xl">Bubble India Summit</p>
+                        <div class="inline-flex mt-8 items-center gap-2 w-full">
+                           <div>
+                              <span class="inline-flex gap-2 items-center rounded-md bg-vanta-800 px-2 py-1 text-xs text-white ring-1 ring-inset ring-white/10">
+                                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-school h-4 w-4" viewBox="0 0 24 24" stroke-width="1.25" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M22 9l-10 -4l-10 4l10 4l10 -4v6"></path>
+                                    <path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4"></path>
+                                 </svg>
+                                 <span>Offline Hackathon</span> 
+                              </span>
+                           </div>
+                           <div>
+                              <p class="inline-flex gap-2 items-center rounded-md px-2 py-1 text-xs text-white">
+                                 <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star fill-white" width="12" height="12" viewBox="0 0 24 24" stroke-width="1.25" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                       <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                       <path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z"></path>
+                                    </svg>
+                                 </span>
+                                 <span>Oct 13 - 14, 2023</span> 
+                              </p>
+                           </div>
+                           <div>
+                              <p class="inline-flex gap-2 items-center rounded-md px-2 py-1 text-xs text-white">
+                                 <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star fill-white" width="12" height="12" viewBox="0 0 24 24" stroke-width="1.25" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                       <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                       <path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z"></path>
+                                    </svg>
+                                 </span>
+                                 <span>$6,500 in prizes</span> 
+                              </p>
+                           </div>
+                        </div>
+                        <p class="mt-8 text-sm text-vanta-300">In Bengaluru, India, focused on building innovative low-code solutions.2</p>
+                     </div>
+                     <div class="mt-12"> <a href="/comingsoon.html" title="Content Marketing Fundamentals" class="rounded-lg px-4 py-2 justify-between text-sm transition-all flex items-center text-white bg-gradient-to-b from-white/[.105] to-white/[.15] hover:to-white/[.25] h-10 ring-1 ring-inset ring-white/10">
+                        250+ Participants <span>View Hackathon</span> </a> 
+                     </div>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </section>
+
+
+      <section>
+         <div class="px-8 py-24 mx-auto md:px-12 lg:px-32 max-w-7xl ">
+            <div class="text-center">
+               <h1 class="bg-gradient-to-r from-vanta-50 via-vanta-300 to-vanta-600 bg-clip-text text-transparent text-4xl font-normal font-display tracking-tight pb-2 lg:text-6xl">
+                  Our Stats<span class="lg:block"></span> 
+               </h1>
+               <p class="max-w-xs mt-4 text-vanta-300 mx-auto">
+                  Our Journey in Numbers
+               </p>
+            </div>
+            <dl class="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-4 py-24">
+               <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+                  <dt class="leading-7 text-vanta-300">Hackathons</dt>
+                  <dd class="order-first text-3xl font-semibold tracking-tight text-white font-display sm:text-5xl">
+                     4
+                  </dd>
+               </div>
+               <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+                  <dt class="leading-7 text-vanta-300">Worth Of Prizes Given Away</dt>
+                  <dd class="order-first text-3xl font-semibold tracking-tight text-white font-display sm:text-5xl">
+                     $100k+
+                  </dd>
+               </div>
+               <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+                  <dt class="leading-7 text-vanta-300">Projects Launched</dt>
+                  <dd class="order-first text-3xl font-semibold tracking-tight text-white font-display sm:text-5xl">
+                     300+
+                  </dd>
+               </div>
+               <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+                  <dt class="leading-7 text-vanta-300">Developers Onboarded</dt>
+                  <dd class="order-first text-3xl font-semibold tracking-tight text-white font-display sm:text-5xl">
+                     1,500+
+                  </dd>
+               </div>
+            </dl>
+         </div>
+      </section>
+
+
+      <section class="relative overflow-hidden">
+         <div class="h-[0.080rem] bg-gradient-to-r from-vanta-950 max-w-3xl mx-auto via-vanta-300 to-vanta-950"></div>
+         <div class="px-8 py-12 mx-auto md:px-12 lg:px-32 max-w-7xl lg:py-24">
+            <div class="ring-white/10 ring-1 p-2 bg-gradient-to-t from-white/20 rounded-3xl text-center">
+               <div class="p-8 ring-1 ring-white/10 rounded-2xl lg:p-10 shadow-massive bg-card/80 h-full">
+                  <p class="bg-gradient-to-r from-vanta-50 via-vanta-300 to-vanta-600 bg-clip-text text-transparent text-4xl font-normal font-display tracking-tight pb-2 sm:text-5xl">
+                     Benefits of Being Part of Astra<span class="lg:block"></span> 
+                  </p>
+                  <p class="text-vanta-300 mx-auto mt-4 max-w-sm">
+                     Perks so good, you'll never want to leave Astra. Seriously.
+                  </p>
+               </div>
+            </div>
+            <ul class="grid grid-cols-1 gap-2 mt-2 list-none md:grid-cols-3 mx-auto ring-white/10 ring-1 p-2 bg-gradient-to-t from-white/20 rounded-3xl" role="list">
+               <li class="p-8 ring-1 ring-white/10 rounded-2xl lg:p-10 shadow-massive bg-card/80 h-full">
+                  <span class="ring-1 ring-white/10 rounded-full bg-white/5 h-10 w-10 items-center inline-flex text-white mx-auto justify-center">
+                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-route" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                        <path d="M18 5m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                        <path d="M12 19h4.5a3.5 3.5 0 0 0 0 -7h-8a3.5 3.5 0 0 1 0 -7h3.5"></path>
+                     </svg>
+                  </span>
+                  <p class="text-lg mt-12 font-display text-white lg:text-xl">Networking Opportunity</p>
+                  <p class="mt-2 text-sm text-vanta-300">Network with professionals, mentors, and peers to exchange ideas, seek advice, and explore collaborations in a supportive environment.</p>
+               </li>
+               <li class="p-8 ring-1 ring-white/10 rounded-2xl lg:p-10 shadow-massive bg-card/80 h-full">
+                  <span class="ring-1 ring-white/10 rounded-full bg-white/5 h-10 w-10 items-center inline-flex text-white mx-auto justify-center">
+                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-milkshake" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.25" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M17 10a5 5 0 0 0 -10 0"></path>
+                        <path d="M6 10m0 1a1 1 0 0 1 1 -1h10a1 1 0 0 1 1 1v1a1 1 0 0 1 -1 1h-10a1 1 0 0 1 -1 -1z"></path>
+                        <path d="M7 13l1.81 7.243a1 1 0 0 0 .97 .757h4.44a1 1 0 0 0 .97 -.757l1.81 -7.243"></path>
+                        <path d="M12 5v-2"></path>
+                     </svg>
+                  </span>
+                  <p class="text-lg mt-12 font-display text-white lg:text-xl">Project Showcase</p>
+                  <p class="mt-2 text-sm text-vanta-300">Project showcasing is an opportunity to share your work with others. It's a chance to display what you've created, get feedback, and be recognized for your efforts.</p>
+               </li>
+               <li class="p-8 ring-1 ring-white/10 rounded-2xl lg:p-10 shadow-massive bg-card/80 h-full">
+                  <span class="ring-1 ring-white/10 rounded-full bg-white/5 h-10 w-10 items-center inline-flex text-white mx-auto justify-center">
+                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-box-padding" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.25" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path>
+                        <path d="M8 16v.01"></path>
+                        <path d="M8 12v.01"></path>
+                        <path d="M8 8v.01"></path>
+                        <path d="M16 16v.01"></path>
+                        <path d="M16 12v.01"></path>
+                        <path d="M16 8v.01"></path>
+                        <path d="M12 8v.01"></path>
+                        <path d="M12 16v.01"></path>
+                     </svg>
+                  </span>
+                  <p class="text-lg mt-12 font-display text-white lg:text-xl">Astra Hackathons</p>
+                  <p class="mt-2 text-sm text-vanta-300">Astra Hackathons are events where people work together on projects, solve problems, and learn new skills quickly. Winners receive cash prizes and potential investment.</p>
+               </li>
+               <li class="p-8 ring-1 ring-white/10 rounded-2xl lg:p-10 shadow-massive bg-card/80 h-full">
+                  <span class="ring-1 ring-white/10 rounded-full bg-white/5 h-10 w-10 items-center inline-flex text-white mx-auto justify-center">
+                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-discount-check" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.25" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M5 7.2a2.2 2.2 0 0 1 2.2 -2.2h1a2.2 2.2 0 0 0 1.55 -.64l.7 -.7a2.2 2.2 0 0 1 3.12 0l.7 .7c.412 .41 .97 .64 1.55 .64h1a2.2 2.2 0 0 1 2.2 2.2v1c0 .58 .23 1.138 .64 1.55l.7 .7a2.2 2.2 0 0 1 0 3.12l-.7 .7a2.2 2.2 0 0 0 -.64 1.55v1a2.2 2.2 0 0 1 -2.2 2.2h-1a2.2 2.2 0 0 0 -1.55 .64l-.7 .7a2.2 2.2 0 0 1 -3.12 0l-.7 -.7a2.2 2.2 0 0 0 -1.55 -.64h-1a2.2 2.2 0 0 1 -2.2 -2.2v-1a2.2 2.2 0 0 0 -.64 -1.55l-.7 -.7a2.2 2.2 0 0 1 0 -3.12l.7 -.7a2.2 2.2 0 0 0 .64 -1.55v-1"></path>
+                        <path d="M9 12l2 2l4 -4"></path>
+                     </svg>
+                  </span>
+                  <p class="text-lg mt-12 font-display text-white lg:text-xl">Career Boost</p>
+                  <p class="mt-2 text-sm text-vanta-300">Astra provides a career boost by connecting you with job opportunities. Partnering with CrackedDevs, we help founders assemble their engineering teams.</p>
+               </li>
+               <li class="p-8 ring-1 ring-white/10 rounded-2xl lg:p-10 shadow-massive bg-card/80 h-full">
+                  <span class="ring-1 ring-white/10 rounded-full bg-white/5 h-10 w-10 items-center inline-flex text-white mx-auto justify-center">
+                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-progress" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.25" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M10 20.777a8.942 8.942 0 0 1 -2.48 -.969"></path>
+                        <path d="M14 3.223a9.003 9.003 0 0 1 0 17.554"></path>
+                        <path d="M4.579 17.093a8.961 8.961 0 0 1 -1.227 -2.592"></path>
+                        <path d="M3.124 10.5c.16 -.95 .468 -1.85 .9 -2.675l.169 -.305"></path>
+                        <path d="M6.907 4.579a8.954 8.954 0 0 1 3.093 -1.356"></path>
+                     </svg>
+                  </span>
+                  <p class="text-lg mt-12 font-display text-white lg:text-xl">Exclusive Events</p>
+                  <p class="mt-2 text-sm text-vanta-300">Exclusive events at Astra offer specialized workshops conducted by industry professionals, providing valuable opportunities level up your skills.</p>
+               </li>
+               <li class="p-8 ring-1 ring-white/10 rounded-2xl lg:p-10 shadow-massive bg-card/80 h-full">
+                  <span class="ring-1 ring-white/10 rounded-full bg-white/5 h-10 w-10 items-center inline-flex text-white mx-auto justify-center">
+                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-school" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.25" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M22 9l-10 -4l-10 4l10 4l10 -4v6"></path>
+                        <path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4"></path>
+                     </svg>
+                  </span>
+                  <p class="text-lg mt-12 font-display text-white lg:text-xl">Fellowship</p>
+                  <p class="mt-2 text-sm text-vanta-300">We have partnered with Localhost to scout potential fellowship members with strong technical capabilities through Astra Hackathons.</p>
+               </li>
+            </ul>
+         </div>
+      </section>
+
+
+      <section class="relative overflow-hidden">
+         <img class="absolute blur-3xl w-96 inset-x-0 h-96 mx-auto bottom-32 left-0" src="images/avatar1.svg" alt=""> 
+         <div class="px-8 py-12 mx-auto md:px-12 lg:px-32 max-w-7xl lg:py-24 relative">
+            <div class="max-w-2xl mx-auto text-center">
+               <p class="bg-gradient-to-r from-vanta-50 via-vanta-300 to-vanta-600 bg-clip-text text-transparent text-4xl font-normal font-display tracking-tight pb-2 sm:text-6xl">
+                  Here's what our top connections say<span class="lg:block"></span> 
+               </p>
+               <p class="text-vanta-300 mt-4 max-w-sm mx-auto"></p>
+            </div>
+            <ol role="list" class="grid grid-cols-1 gap-3 mt-12 sm:grid-cols-2 lg:mt-24 lg:grid-cols-3 [&amp;>*:nth-child(1)]:-rotate-12 [&amp;>*:nth-child(3)]:rotate-12">
+               <li class="ring-white/10 ring-1 p-2 bg-gradient-to-t from-white/20 rounded-3xl">
+                  <div class="h-full p-8  ring-1 ring-white/10 rounded-2xl lg:p-10 shadow-massive bg-card/80">
+                     <div class="flex flex-col justify-between h-full">
+                        <div>
+                           <p class=" text-sm text-vanta-300 ">"I have been a part of Astra for almost 3 months now & it has been an experience. A good one. The community is very warm & welcoming at first and it continues to be so. Love being a part of Astra"</p>
+                           <div class="flex-shrink-0 block mt-12">
+                              <div class="flex items-center">
+                                 <div>
+                                    <p class="text-sm font-display text-white">Vibhuti Bafna</p>
+                                    <p class="text-vanta-300">Innovator at TKS</p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </li>
+               <li class="ring-white/10 ring-1 p-2 bg-gradient-to-t from-white/20 rounded-3xl">
+                  <div class="h-full p-8  ring-1 ring-white/10 rounded-2xl lg:p-10 shadow-massive bg-card/80">
+                     <div class="flex flex-col justify-between h-full">
+                        <div>
+                           <p class=" text-sm text-vanta-300 ">
+                              "We had a great experience sponsoring Astra Hackathons over the last few months. Jay and team have grown their developer community exponentially and have attracted some of the best developers around the world to join their hackathons resulting in greater visibility for our product."
+                           </p>
+                           <div class="flex-shrink-0 block mt-12">
+                              <div class="flex items-center">
+                                 <div>
+                                    <p class="text-sm font-display text-white"> Harsh Agrawal</p>
+                                    <p class="text-vanta-300">Founder of DevKit</p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </li>
+               <li class="ring-white/10 ring-1 p-2 bg-gradient-to-t from-white/20 rounded-3xl">
+                  <div class="h-full p-8  ring-1 ring-white/10 rounded-2xl lg:p-10 shadow-massive bg-card/80">
+                     <div class="flex flex-col justify-between h-full">
+                        <div>
+                           <p class=" text-sm text-vanta-300 ">
+                              "I’m always glad to sponsor Astra Hackathons because they’re introducing others to the wonderful world of indie hacking. It’s a brilliant way to empower people to build their own careers and create value for others through products."
+                           </p>
+                           <div class="flex-shrink-0 block mt-12">
+                              <div class="flex items-center">
+                                 <div>
+                                    <p class="text-sm font-display text-white">Kieran</p>
+                                    <p class="text-vanta-300">Founder of Yep.so</p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </li>
+            </ol>
+         </div>
+      </section>
+
+
+      <section>
+         <div class="px-8 py-12 mx-auto md:px-12 lg:px-32 max-w-7xl lg:py-24">
+            <div class="ring-white/10 ring-1 p-2 rounded-3xl bg-gradient-to-t from-white/20 relative">
+               <img class="absolute blur-3xl w-96 inset-x-0 h-96 mx-auto bottom-12 left-0" src="images/avatar1.svg" alt=""> 
+               <div class="flex flex-col bg-card/80 backdrop-blur-2xl rounded-2xl shadow-massive ring-white/10 ring-1 p-8 lg:p-20 relative">
+                  <div class="lg:text-center max-w-2xl lg:mx-auto">
+                     <p class="bg-gradient-to-r from-vanta-50 via-vanta-300 to-vanta-600 bg-clip-text text-transparent text-4xl font-normal font-display tracking-tight pb-2 sm:text-6xl">
+We are 500+ builders from around the world who innovate together</p>
+                     <p class="text-vanta-300 mt-4 mx-auto">Collaborate, innovate, and build</p>
+                  </div>
+                  <div class="flex flex-col max-w-xl mx-auto justify-center gap-2 mt-12 sm:flex-row relative"> <a href="https://discord.com/invite/ztCZXZjj7T" aria-label="Join Astra - Hack & Build together!" title="Join Astra - Hack & Build together!" class="flex items-center justify-center h-10 px-4 py-2 text-sm text-white transition-all rounded-lg hover:to-vanta-600 bg-gradient-to-b from-vanta-300 via-vanta-400 to-vanta-500">Join Astra</a></div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <footer>
+         <div class="px-8 py-12 mx-auto md:px-12 lg:px-32 max-w-7xl lg:py-12">
+            <div class="p-2 ring-white/10 ring-1 rounded-3xl bg-gradient-to-t from-white/20">
+               <div class="p-8 bg-card/80 backdrop-blur-2xl rounded-2xl shadow-massive ring-white/10 ring-1 lg:p-20">
+                  <div class="gap-12 xl:grid xl:grid-cols-3 xl:gap-8">
+                     <a aria-label="Astra" title="Astra" href="/" class="inline-flex gap-3 text-white">
+                        <span>
+                        </span>
+                        <span class="text-xl font-bold uppercase">Astra</span> 
+                     </a>
+                     <div class="grid grid-cols-2 gap-8 md:grid-cols-3 lg:col-span-2">
+                        <div>
+                           <h3 class="text-xl font-normal tracking-tight text-white font-display">
+                              Socials
+                           </h3>
+                           <ul role="list" class="mt-4 space-y-2">
+                              <li> <a aria-label="Follow Astra on Twitter" title="Follow Astra on Twitter" href="https://twitter.com/AstraOrg" class="text-xs text-vanta-400 hover:text-white">
+                                 Twitter
+                                 </a> 
+                              </li>
+                              <li> <a aria-label="Follow Astra on LinkedIn" title="Follow Astra on LinkedIn" href="https://www.linkedin.com/company/theastraorg" class="text-xs text-vanta-400 hover:text-white">
+                                 LinkedIn
+                                 </a> 
+                              </li>
+                           </ul>
+                        </div>
+                        <div>
+                           <h3 class="text-xl font-normal tracking-tight text-white font-display">
+                              Organization
+                           </h3>
+                           <ul role="list" class="mt-4 space-y-2">
+                              <li> <a aria-label="About Astra" title="About Astra" href="/comingsoon.html" class="text-xs text-vanta-400 hover:text-white">
+                                 Who We Are
+                                 </a> 
+                              </li>
+                              <li> <a aria-label="Sponsors" title="Sponsors" href="/comingsoon.html" class="text-xs text-vanta-400 hover:text-white">
+                                 Sponsors
+                                 </a> 
+                              </li>
+                              <li> <a aria-label="Press" title="Press" href="/comingsoon.html" class="text-xs text-vanta-400 hover:text-white">
+                                 Press
+                                 </a> 
+                              </li>
+                              <li> <a aria-label="Contact Us" title="Contact Us" href="/comingsoon.html" class="text-xs text-vanta-400 hover:text-white">
+                                 Contact Us
+                                 </a> 
+                              </li>
+                           </ul>
+                        </div>
+                        <div>
+                           <h3 class="text-xl font-normal tracking-tight text-white font-display">
+                              Legal
+                           </h3>
+                           <ul role="list" class="mt-4 space-y-2">
+                              <li> <a aria-label="Terms of Service" title="Terms of Service" href="/comingsoon.html" class="text-xs text-vanta-400 hover:text-white">
+                                 Terms of Service
+                                 </a> 
+                              </li>
+                              <li> <a aria-label="Privacy Policy" title="Privacy Policy" href="/comingsoon.html" class="text-xs text-vanta-400 hover:text-white">
+                                 Privacy Policy
+                                 </a> 
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+                  <nav class="flex flex-col gap-8 mt-12 lg:mt-24 ">
+                     <p class="text-xs text-vanta-400 hover:text-white">
+                        2024 Astra Org &copy; All rights reserved
+                     </p>
+                  </nav>
+                  <section class="mt-6 gap-x-8 gap-y-6">
+                     <div>
+                        <p class="text-sm text-vanta-400 hover:text-white lg:col-span-2">
+                           Build Out Ideas That Excite You — Hackathon Ecosystem for Builders, Indie-Hackers, and Aspiring Student Engineers.
+                        </p>
+                     </div>
+                  </section>
+               </div>
+            </div>
+         </div>
+      </footer>
+   </body>
+</html>
