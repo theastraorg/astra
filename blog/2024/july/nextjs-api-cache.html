@@ -73,7 +73,7 @@
             <div class="ring-white/10 ring-1 p-2 rounded-3xl bg-gradient-to-t from-white/20 max-w-3xl mx-auto">
                <div class="bg-card/80 backdrop-blur-2xl p-8 rounded-2xl shadow-massive ring-white/10 ring-1">
                   <div class="flex flex-col lg:flex-row justify-between w-full gap-12">
-                     <img class="lg:Bw-32 h-32 rounded-xl object-cover mt-12" src="https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0d43a719-a9a3-4d51-b639-923dc912d4ae_1775x1113.png" alt="#"> 
+                     <img class="lg:Bw-32 h-32 rounded-xl object-cover mt-12" src="nextjs-api-cache.png" alt="#"> 
                      <div class="mt-4">
                         <div class="sm:inline-flex space-x-1 w-full">
                            <p class="text-white text-xs">
@@ -126,9 +126,9 @@
 
                <p><b style="color: white;">Initialization Redis Object</b></p>
                <pre class="code-block">
-<span style="color: #f44545;">const</span><span style="color: rgb(78, 162, 241);"> redis</span><span style="color: #f44545;"> = new</span><span style="color: rgb(166, 72, 166);"> Redis({</span>
+<span style="color: #f44545;">const</span><span style="color: rgb(78, 162, 241);"> redis</span><span style="color: #f44545;"> = new</span><span style="color: rgb(166, 72, 166);"> Redis</span>({
 url<span style="color: #f44545;">:</span><span style="color: rgb(18, 255, 18);">`</span><span style="color: #f44545;">${</span><span style="color: rgb(78, 162, 241);">process.env.UPSTASH_REDIS_REST_URL</span><span style="color: #f44545;">}</span><span style="color: rgb(18, 221, 18);">`</span>,
-token<span style="color: #f44545;">:</span><span style="color: rgb(18, 255, 18);">`</span style="color: #f44545;">${<span style="color: rgb(78, 162, 241);">process.env.UPSTASH_REDIS_REST_TOKEN</span><span style="color: #f44545;">}</span><span style="color: rgb(18, 221, 18);">`</span>,
+token<span style="color: #f44545;">:</span><span style="color: rgb(18, 255, 18);">`</span> <span style="color: #f44545;">${</span><span style="color: rgb(78, 162, 241);">process.env.UPSTASH_REDIS_REST_TOKEN</span><span style="color: #f44545;">}</span><span style="color: rgb(18, 221, 18);">`</span>,
 });</pre>
               
                <p>It needs two environment variables <code>UPSTASH_REDIS_REST_URL</code> and<br>
@@ -136,9 +136,66 @@ token<span style="color: #f44545;">:</span><span style="color: rgb(18, 255, 18);
 
                <p><b style="color: white;">Creating Redis Key</b></p>
                <pre class="code-block"><span style="color: #f44545;">const</span> <span style="color: rgb(78, 162, 241);">RedisKey</span> <span style="color: #f44545;">=</span> <span style="color: rgb(11, 187, 11);">`jobs:.....\n`</span>; <span style="color: gray;">// unique key</span></pre>
+
+               <p><b style="color: white;">Adding a response to Redis with expiry time</b></p>
+               <pre class="code-block"><span style="color: #f44545;">await</span> <span style="color: rgb(78, 162, 241);">redis</span><span style="color: #B392F0">.set</span>(RedisKey,<span style="color: rgb(78, 162, 241);">JSON</span><span style="color: #B392F0">.stringify</span>(data)); <span style="color: gray;">// stores the object as string</span>
+<span style="color: #f44545;">await</span><span style="color: rgb(78, 162, 241);">redis</span><span style="color: #B392F0">.expire</span>(RedisKey, <span style="color: rgb(78, 162, 241);">600</span>); <span style="color: gray;">// 10 minutes</span></pre>
+
+<p><b style="color: white;">Retrieving the data from Redis</b></p>
+<pre class="code-block"><span style="color: #f44545;">const</span> <span style="color: rgb(78, 162, 241);">CachedData</span><span style="color: #f44545;">= await</span><span style="color: rgb(78, 162, 241);">redis</span><span style="color: #B392F0">.get</span>(jobRedisKey);</pre>
+
+<p><b style="color: white;">Conditional to check if cache exists , if yes then return cache</b></p>
+<pre class="code-block"><span style="color: #f44545;">if</span> (CachedData) <span>{</span>
+<span style="color: gray;">// If data is found in cache, parse it if it's a string and return</span>
+<span style="color: rgb(78, 162, 241);">console</span>.log(<span style="color: rgb(18, 255, 18);">'cache HIT'</span>);</span>
+<span style="color: #f44545;">const</span> <span style="color: rgb(78, 162, 241);">data</span> <span style="color: #f44545;">=</span>
+<span style="color: #f44545;">typeof</span> CachedData <span style="color: #f44545;">===</span> <span style="color: rgb(18, 255, 18);">'string'</span> <span style="color: gray;">// checks if the data is string if yes then parse it</span>
+<span style="color: #f44545;">?</span> <span style="color: rgb(78, 162, 241);">JSON</span><span style="color: #B392F0">.parse</span>(CachedData)
+<span style="color: #f44545;">:</span> CachedData;
+
+<span style="color: #f44545;">return</span> <span style="color: rgb(78, 162, 241);">NextResponse</span><span style="color: #B392F0">.json</span>(data); <span style="color: gray;">// return the cached data</span>
+}</pre>
+
+<p><b style="color: white;">So the final code looks like this</b></p>
+<pre class="code-block"><span style="color: #f44545;">import</span> { NextResponse } <span style="color: #f44545;">from</span> <span style="color: rgb(18, 255, 18);">'next/server'</span>;
+<span style="color: #f44545;">import</span> { Redis } <span style="color: #f44545;">from</span> <span style="color: rgb(18, 255, 18);">'@upstash/redis'</span>;
+
+<span style="color: #f44545;">const</span><span style="color: rgb(78, 162, 241);"> redis</span><span style="color: #f44545;"> = new</span><span style="color: rgb(166, 72, 166);"> Redis</span>({
+url<span style="color: #f44545;">:</span><span style="color: rgb(18, 255, 18);">`</span><span style="color: #f44545;">${</span><span style="color: rgb(78, 162, 241);">process.env.UPSTASH_REDIS_REST_URL</span><span style="color: #f44545;">}</span><span style="color: rgb(18, 221, 18);">`</span>,
+token<span style="color: #f44545;">:</span><span style="color: rgb(18, 255, 18);">`</span> <span style="color: #f44545;">${</span><span style="color: rgb(78, 162, 241);">process.env.UPSTASH_REDIS_REST_TOKEN</span><span style="color: #f44545;">}</span><span style="color: rgb(18, 221, 18);">`</span>,
+});
+
+<span style="color: #f44545;">const</span> <span style="color: rgb(78, 162, 241);">RedisKey</span> <span style="color: #f44545;">=</span> <span style="color: rgb(11, 187, 11);">`jobs:.....\n`</span>; <span style="color: gray;">// unique key</span>
+
+<span style="color: #f44545 ;">export default async function</span> <span style="color: #B392F0;">handler</span>(req, res) {
+<span style="color: #f44545;">const</span> <span style="color: rgb(78, 162, 241);">CachedData</span><span style="color: #f44545;">= await</span><span style="color: rgb(78, 162, 241);">redis</span><span style="color: #B392F0">.get</span>(jobRedisKey);
+
+<span style="color: #f44545;">if</span> (CachedData) <span>{</span>
+   <span style="color: gray;">// If data is found in cache, parse it if it's a string and return</span>
+   <span style="color: rgb(78, 162, 241);">console</span>.log(<span style="color: rgb(18, 255, 18);">'cache HIT'</span>);</span>
+   <span style="color: #f44545;">const</span> <span style="color: rgb(78, 162, 241);">data</span> <span style="color: #f44545;">=</span>
+   <span style="color: #f44545;">typeof</span> CachedData <span style="color: #f44545;">===</span> <span style="color: rgb(18, 255, 18);">'string'</span> <span style="color: gray;">// checks if the data is string if yes then parse it</span>
+   <span style="color: #f44545;">?</span> <span style="color: rgb(78, 162, 241);">JSON</span><span style="color: #B392F0">.parse</span>(CachedData)
+   <span style="color: #f44545;">:</span> CachedData;
+
+   <span style="color: #f44545;">return</span> <span style="color: rgb(78, 162, 241);">NextResponse</span><span style="color: #B392F0">.json</span>(data); <span style="color: gray;">// return the cached data</span>
+}
+
+<span style="color: #f44545;">const</span> <span style="color: rgb(78, 162, 241);">response</span> <span style="color: #f44545;">= await</span> <span style="color: #B392F0">fetch</span>(<span style="color: rgb(18, 255, 18);">'https://jobs.github.com/positions.json?description=javascript&location=remote'</span>); <span style="color: gray;">// fetching example but can be anything</span>
+
+<span style="color: #f44545;">const</span> <span style="color: rgb(78, 162, 241);">data</span> <span style="color: #f44545;">= await</span> <span style="color: rgb(78, 162, 241);">response</span><span style="color: #B392F0">.json</span>();
+
+<span style="color: #f44545;">await</span> <span style="color: rgb(78, 162, 241);">redis</span><span style="color: #B392F0">.set</span>(RedisKey,<span style="color: rgb(78, 162, 241);">JSON</span><span style="color: #B392F0">.stringify</span>(data)); <span style="color: gray;">// stores the object as string</span>
+<span style="color: #f44545;">await</span><span style="color: rgb(78, 162, 241);">redis</span><span style="color: #B392F0">.expire</span>(RedisKey, <span style="color: rgb(78, 162, 241);">600</span>); <span style="color: gray;">// 10 minutes</span>
+
+<span style="color: #f44545;">return</span> <span style="color: rgb(78, 162, 241);">NextResponse</span><span style="color: #B392F0">.json</span>(data);
+}</pre>
+
+<hr>
+<p><i>So that's it , I hope you enjoyed reading this article. Have a great day ahead . ☀️</i></p>
+
+
                
-               <p><i>Thank you for joining us on this journey through the latest updates and developments at Astra. <br>Your continued support and engagement are what make our community thrive. Keep building, keep innovating, and remember, the sky's the limit!</i></p>
-              <!-- <div class="flex flex-col max-w-xl mx-auto justify-center gap-2 mt-12 sm:flex-row relative"> <a href="https://lu.ma/build24" aria-label="Astra X Beeloud AI Hackathon 2024!" title="Astra X Beeloud AI Hackathon 2024!" class="rounded-lg px-4 py-2 text-sm transition-all flex items-center justify-center h-8 ring-1 ring-inset ring-white/20" style="text-decoration: none; color: white;">Register Now</a></div> -->
             </section>
             </div>
          </div>
@@ -176,19 +233,19 @@ token<span style="color: #f44545;">:</span><span style="color: rgb(18, 255, 18);
                              Organization
                           </h3>
                           <ul role="list" class="mt-4 space-y-2">
-                             <li> <a aria-label="About Astra" title="About Astra" href="/about.html" class="text-xs text-vanta-400 hover:text-white">
+                             <li> <a aria-label="About Astra" title="About Astra" href="/about" class="text-xs text-vanta-400 hover:text-white">
                                 Who We Are
                                 </a> 
                              </li>
-                             <li> <a aria-label="Blog" title="Blog" href="/blog.html" class="text-xs text-vanta-400 hover:text-white">
+                             <li> <a aria-label="Blog" title="Blog" href="/blog" class="text-xs text-vanta-400 hover:text-white">
                               Blog
                                 </a> 
                              </li>
-                             <li> <a aria-label="Press" title="View ouur upcoming hackathons" href="/events.html" class="text-xs text-vanta-400 hover:text-white">
+                             <li> <a aria-label="Press" title="View ouur upcoming hackathons" href="/events" class="text-xs text-vanta-400 hover:text-white">
                                 Events
                                 </a> 
                              </li>
-                             <li> <a aria-label="Contact Us" title="Contact Us" href="/comingsoon.html" class="text-xs text-vanta-400 hover:text-white">
+                             <li> <a aria-label="Contact Us" title="Contact Us" href="/comingsoon" class="text-xs text-vanta-400 hover:text-white">
                                 Contact Us
                                 </a> 
                              </li>
