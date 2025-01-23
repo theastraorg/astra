@@ -375,11 +375,12 @@ We are 600+ builders from around the world who innovate together</p>
                      </div>
                   </div>
                </div>
-               <nav class="flex flex-col gap-8 mt-12 lg:mt-24 ">
+               <nav class="flex flex-col gap-8 mt-12 lg:mt-24">
                   <p class="text-xs text-vanta-400 hover:text-white">
-                     2024 Astra Org &copy; All rights reserved
+                     <span id="current-year"></span> Astra Org &copy; All rights reserved
                   </p>
                </nav>
+               
                <section class="mt-6 gap-x-8 gap-y-6">
                   <div>
                      <p class="text-sm text-vanta-400 hover:text-white lg:col-span-2">
@@ -387,6 +388,11 @@ We are 600+ builders from around the world who innovate together</p>
                      </p>
                   </div>
                </section>
+               
+               <script>
+                  const currentYear = new Date().getFullYear();
+                  document.getElementById('current-year').textContent = currentYear;
+               </script>
             </div>
          </div>
       </div>
